@@ -169,7 +169,7 @@ class _SearchState extends State<Search> {
                                       bottom: size.height * 0.01,
                                       child: RichText(
                                           text: TextSpan(
-                                              text: "€",
+                                              text: "₹",
                                               style:
                                                   textTheme.subtitle2?.copyWith(
                                                 color: primaryColor,
