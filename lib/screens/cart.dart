@@ -15,10 +15,7 @@ class Cart extends StatefulWidget {
   @override
   State<Cart> createState() => _CartState();
 }
-//CodeWithFlexz on Instagram
 
-//AmirBayat0 on Github
-//Programming with Flexz on Youtube
 
 class _CartState extends State<Cart> {
   /// Calculate the Total Price
@@ -200,10 +197,10 @@ class _CartState extends State<Cart> {
                                       ),
                                       RichText(
                                           text: TextSpan(
-                                              text: "€",
+                                              text: "₹",
                                               style:
                                                   textTheme.subtitle2?.copyWith(
-                                                fontSize: 22,
+                                                fontSize: 26,
                                                 color: primaryColor,
                                                 fontWeight: FontWeight.bold,
                                               ),
@@ -212,25 +209,25 @@ class _CartState extends State<Cart> {
                                               text: current.price.toString(),
                                               style:
                                                   textTheme.subtitle2?.copyWith(
-                                                fontSize: 17,
+                                                fontSize: 19,
                                                 fontWeight: FontWeight.w600,
                                               ),
                                             )
                                           ])),
                                       SizedBox(
-                                        height: size.height * 0.04,
+                                        height: size.height * 0.01,
                                       ),
                                       Text(
-                                        "Size = ${sizes[3]}",
+                                        "Size = ${sizes[4]}",
                                         style: textTheme.subtitle2?.copyWith(
-                                          fontSize: 15,
+                                          fontSize: 18,
                                           color: Colors.grey,
                                           fontWeight: FontWeight.w400,
                                         ),
                                       ),
                                       Container(
                                         margin: EdgeInsets.only(
-                                          top: size.height * 0.058,
+                                          top: size.height * 0.069,
                                         ),
                                         width: size.width * 0.4,
                                         height: size.height * 0.04,
@@ -269,12 +266,12 @@ class _CartState extends State<Cart> {
                                             Padding(
                                               padding: EdgeInsets.symmetric(
                                                   horizontal:
-                                                      size.width * 0.02),
+                                                      size.width * 0.01),
                                               child: Text(
                                                 current.value.toString(),
                                                 style: textTheme.subtitle2
                                                     ?.copyWith(
-                                                  fontSize: 15,
+                                                  fontSize: 25,
                                                   fontWeight: FontWeight.w600,
                                                 ),
                                               ),
@@ -322,10 +319,10 @@ class _CartState extends State<Cart> {
 
             /// Bottom Card
             Positioned(
-              bottom: 0,
+              bottom: 25,
               child: Container(
                 width: size.width,
-                height: size.height * 0.36,
+                height: size.height * 0.56,
                 color: Colors.white,
                 child: Padding(
                   padding: const EdgeInsets.symmetric(
@@ -380,7 +377,7 @@ class _CartState extends State<Cart> {
                       FadeInUp(
                         delay: const Duration(milliseconds: 550),
                         child: Padding(
-                          padding: const EdgeInsets.symmetric(vertical: 15.0),
+                          padding: const EdgeInsets.symmetric(vertical: 12.0),
                           child: ReuseableButton(
                               text: "Checkout",
                               onTap: () {
