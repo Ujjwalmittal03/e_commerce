@@ -70,7 +70,7 @@ class _MainWrapperState extends State<MainWrapper> {
                 ? const Icon(
                     LineIcons.searchMinus,
                     color: Colors.black,
-                    size: 30,
+                    size: 20,
                   )
                 : const Icon(
                     LineIcons.search,
