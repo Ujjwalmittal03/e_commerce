@@ -97,7 +97,7 @@ class _HomeState extends State<Home> {
                 child: Container(
                   margin: const EdgeInsets.only(top: 7),
                   width: size.width,
-                  height: size.height * 0.14,
+                  height: size.height * 0.25,
                   child: ListView.builder(
                       physics: const BouncingScrollPhysics(),
                       scrollDirection: Axis.horizontal,
@@ -183,21 +183,21 @@ class _HomeState extends State<Home> {
                       physics: const BouncingScrollPhysics(),
                       itemCount: mainList.length,
                       gridDelegate:
-                          const SliverGridDelegateWithFixedCrossAxisCount(
-                              crossAxisCount: 2, childAspectRatio: 0.59),
+                      const SliverGridDelegateWithFixedCrossAxisCount(
+                          crossAxisCount: 2, childAspectRatio: 0.59),
                       itemBuilder: (context, index) {
                         BaseModel current = mainList[index];
                         return GestureDetector(
                           onTap: (() => Navigator.push(
-                                context,
-                                MaterialPageRoute(builder: (context) {
-                                  FocusManager.instance.primaryFocus?.unfocus();
-                                  return Details(
-                                    data: current,
-                                    isCameFromMostPopularPart: true,
-                                  );
-                                }),
-                              )),
+                            context,
+                            MaterialPageRoute(builder: (context) {
+                              FocusManager.instance.primaryFocus?.unfocus();
+                              return Details(
+                                data: current,
+                                isCameFromMostPopularPart: true,
+                              );
+                            }),
+                          )),
                           child: Hero(
                             tag: current.imageUrl,
                             child: Column(
@@ -237,13 +237,13 @@ class _HomeState extends State<Home> {
                                           fontWeight: FontWeight.bold,
                                         ),
                                         children: [
-                                      TextSpan(
-                                        text: current.price.toString(),
-                                        style: textTheme.subtitle2?.copyWith(
-                                          fontWeight: FontWeight.bold,
-                                        ),
-                                      )
-                                    ])),
+                                          TextSpan(
+                                            text: current.price.toString(),
+                                            style: textTheme.subtitle2?.copyWith(
+                                              fontWeight: FontWeight.bold,
+                                            ),
+                                          )
+                                        ])),
                               ],
                             ),
                           ),
